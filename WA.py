@@ -175,7 +175,7 @@ def show_settings_window():
     lens_label = ttk.Label(settings_window, text="Custom Lens:")
     lens_dropdown = ttk.Combobox(settings_window, textvariable=lens_var, state='disabled')
 
-    override_notes_label = ttk.Label(settings_window, text="Override notes for each question in the workload")
+    override_notes_label = ttk.Label(settings_window, text="Override notes")
     override_notes_checkbox = ttk.Checkbutton(settings_window, variable=override_notes_var)
 
 
@@ -233,8 +233,8 @@ def show_settings_window():
     lens_dropdown.grid(row=2, column=1, padx=5, pady=5)
 
     # 以下被注释的代码功能是提供一个checkbox，提供一个选项，允许追加notes而不是覆盖notes，但因为wa 的notes有长度限制，当check项目问题较多时追加notes会引起报错，所以谨慎起见，注释掉，不提供追加的功能。
-    # override_notes_label.grid(row=3, column=1, padx=5, pady=5, sticky=tk.W)
-    # override_notes_checkbox.grid(row=3, column=0, padx=5, pady=5, sticky=tk.W)
+    override_notes_label.grid(row=3, column=1, padx=5, pady=5, sticky=tk.W)
+    override_notes_checkbox.grid(row=3, column=0, padx=5, pady=5, sticky=tk.W)
 
     #save_button.grid(row=3, columnspan=2, padx=5, pady=8)
     save_button.place(relx=0.5, rely=0.82, anchor="center")
@@ -428,7 +428,7 @@ def update_workload_with_TA():
     lens_alias = ''
     region_id = ''
     update_count = 0
-    overide_notes = True
+    overide_notes = False
     try:
         region_id = settings['region']
         workload_id = settings['workload'].split(hide_secret)[-1]
@@ -465,17 +465,29 @@ def update_workload_with_TA():
                 QuestionId=question[1]
                 )
             #print ("Choice Title------------>",question[3],question[3])
-            if 'Notes' in response['Answer']:
-                notes = response['Answer']['Notes']
+          # 首先，如果 override_notes 为 True，清空原有的 Notes
+            if overide_notes:
+                wellarchitected_client.update_answer(
+                    WorkloadId=workload_id,
+                    LensAlias=lens_alias,
+                    QuestionId=question[1],
+                    Notes=''
+                )
+                existing_notes = ''
+            else:
+                existing_notes = response['Answer'].get('Notes', '')
                 
             index = 7 if chinese_notes_var.get() else 6
             notes = '\n--Updated by Architecture Insights Generator at ' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S") + '--\n' + question[5] + '\n' + question[index] + '\n-- --\n' + notes
+            
+            # 无论是否 override，都添加新的 notes
+            updated_notes = notes + existing_notes
 
             response = wellarchitected_client.update_answer(
                 WorkloadId=workload_id,
                 LensAlias=lens_alias,
                 QuestionId=question[1],
-                Notes=notes[:2000]
+                Notes=updated_notes[:2000]
             )
             update_count += 1
             logger.info(f"Successfully updated answer for question: {question[1]}")
