@@ -65,6 +65,8 @@ This library is licensed under the MIT-0 License. See the LICENSE file.
 
 ## Comments
 
+所有 AWS 账户计划均可访问 56 个 AWS Trusted Advisor 检查。Business Support 及以上级别可解锁另外 426 项检查，总计 482 项 Trusted Advisor 检查
+
 1. pjson.py lens.json转output.csv 用于生成所有lens内容.
 2. questionnaire.py 用于生成调查问卷,会包含所有Pillar问卷
 3. 中文note按钮(需要在上传文档前选择),提交上去的comments会是中文的,如果中文翻译的不好可以自行修改output.csv内容
