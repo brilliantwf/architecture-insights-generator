@@ -72,25 +72,21 @@ msg_label.pack(pady=10)
 # 创建文件选择按钮
 chinese_notes_var = tk.BooleanVar()
 chinese_notes_checkbox = tk.Checkbutton(root, text="中文notes", variable=chinese_notes_var)
-chinese_notes_checkbox.place(relx=0.7, rely=0.52, anchor="center")
+chinese_notes_checkbox.place(relx=0.7, rely=0.62, anchor="center")
 
 file_button = tk.Button(root, text="Select Excel File", font=("Arial", 14), command=lambda: browse_file(), width=10)
-file_button.place(relx=0.5, rely=0.52, anchor="center")
+file_button.place(relx=0.5, rely=0.62, anchor="center")
 
 
 # 创建设置按钮
 settings_button = tk.Button(root, text="Settings", font=("Arial", 14), command=lambda: show_settings_window(), width=10)
-settings_button.place(relx=0.5, rely=0.64, anchor="center")
+settings_button.place(relx=0.5, rely=0.74, anchor="center")
 
 # 创建更新WA按钮
 update_button = tk.Button(root, text="Update Workload", font=("Arial", 14), command=lambda: update_workload_with_TA(), width=10)
-update_button.place(relx=0.5, rely=0.76, anchor="center")
+update_button.place(relx=0.5, rely=0.86, anchor="center")
 update_button.config(state="disabled")
 
-# 创建更新问卷按钮
-updateQ_button = tk.Button(root, text="Update QNR", font=("Arial", 14), command=lambda: update_Questionnaire(), width=14)
-updateQ_button.place(relx=0.5, rely=0.88, anchor="center")
-updateQ_button.config(state="disabled")
 
 # 创建设置对象
 settings = {
@@ -315,7 +311,6 @@ def import_excel(filename):
     update_msg_label("The analysis has been saved in the TA-check.xlsx file in the current directory. If you need to update it to the Notes in the AWS WA Tool, please first set the necessary parameters through the 'Settings'.")
 
     update_button.config(state="normal")
-    updateQ_button.config(state="normal")
 
 
 
@@ -445,6 +440,9 @@ def update_workload_with_TA():
         messagebox.showerror("ERROR", "Your settings is not configured correctly, please check.")
         return
 
+    # 更新QNR
+    update_Questionnaire()
+    
 
     wellarchitected_client = boto3.client('wellarchitected', region_name=region_id)
     """
@@ -526,6 +524,7 @@ def update_Questionnaire():
 
     # Save the modified workbook
     workbook.save('qnr_modified.xlsx')
+    logger.info("QNR update complete")
     
 
 # 定义更新Label文本的函数

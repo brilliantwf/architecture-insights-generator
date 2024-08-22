@@ -1,0 +1,321 @@
+2024-08-22 14:41:52,906 - INFO - **********Deleted data.db***********
+2024-08-22 14:43:30,770 - INFO - **********Deleted data.db***********
+2024-08-22 14:49:47,255 - INFO - **********Deleted data.db***********
+2024-08-22 14:50:00,770 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,770 - INFO - SELECT * FROM [Amazon RDS Idle DB Instances...];
+2024-08-22 14:50:00,772 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,772 - INFO - SELECT * FROM [Unassociated Elastic IP...(139)];
+2024-08-22 14:50:00,773 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,773 - INFO - SELECT * FROM [Low Utilization Amazon ...(140)];
+2024-08-22 14:50:00,778 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,778 - INFO - SELECT * FROM [Underutilized Amazon EB...(255)];
+2024-08-22 14:50:00,785 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,785 - INFO - SELECT * FROM [Amazon EFS Throughput M...(164)];
+2024-08-22 14:50:00,787 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,787 - INFO - SELECT * FROM [Amazon Route 53 Alias R...(063)];
+2024-08-22 14:50:00,789 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,789 - INFO - SELECT * FROM [AWS Lambda VPC-enabled ...(219)];
+2024-08-22 14:50:00,791 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,791 - INFO - SELECT * FROM [Amazon S3 Bucket Logging...(263];
+2024-08-22 14:50:00,837 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,837 - INFO - SELECT * FROM [Auto Scaling Group Health Check];
+2024-08-22 14:50:00,839 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,839 - INFO - SELECT * FROM [Auto Scaling Group Resources...];
+2024-08-22 14:50:00,842 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,842 - INFO - SELECT * FROM [Amazon S3 Bucket Versioning...(];
+2024-08-22 14:50:00,857 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,857 - INFO - SELECT * FROM [Amazon EBS Snapshots...(326)];
+2024-08-22 14:50:00,865 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,865 - INFO - SELECT * FROM [MFA on Root Account...(057)];
+2024-08-22 14:50:00,865 - ERROR - Error: no such table: MFA on Root Account...(057)
+Traceback (most recent call last):
+  File "/Users/fiwa/Documents/work/GitNote/Study/Coding/Python/architecture-insights-generator/WA.py", line 372, in output_excel
+    c.execute(query)
+sqlite3.OperationalError: no such table: MFA on Root Account...(057)
+2024-08-22 14:50:00,868 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,869 - INFO - SELECT * FROM [IAM Password Policy...(204)];
+2024-08-22 14:50:00,870 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,870 - INFO - SELECT * FROM [MFA on Root Account...(057)];
+2024-08-22 14:50:00,870 - ERROR - Error: no such table: MFA on Root Account...(057)
+Traceback (most recent call last):
+  File "/Users/fiwa/Documents/work/GitNote/Study/Coding/Python/architecture-insights-generator/WA.py", line 372, in output_excel
+    c.execute(query)
+sqlite3.OperationalError: no such table: MFA on Root Account...(057)
+2024-08-22 14:50:00,871 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,871 - INFO - SELECT * FROM [ACM certificates should...(095)];
+2024-08-22 14:50:00,872 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,872 - INFO - SELECT * FROM [IAM Password Policy...(204)];
+2024-08-22 14:50:00,873 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,873 - INFO - SELECT * FROM [IAM Access Key Rotation...(247)];
+2024-08-22 14:50:00,875 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,875 - INFO - SELECT * FROM [IAM Access Key Rotation...(247)];
+2024-08-22 14:50:00,877 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,877 - INFO - SELECT * FROM [IAM authentication shou...(291)];
+2024-08-22 14:50:00,879 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,879 - INFO - SELECT * FROM [IAM authentication shou...(294)];
+2024-08-22 14:50:00,880 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,880 - INFO - SELECT * FROM [API Gateway REST and We...(341)];
+2024-08-22 14:50:00,881 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,881 - INFO - SELECT * FROM [Hardware MFA should be ...(353)];
+2024-08-22 14:50:00,882 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,882 - INFO - SELECT * FROM [Password policies for I...(355)];
+2024-08-22 14:50:00,883 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,883 - INFO - SELECT * FROM [Secrets Manager secrets...(422)];
+2024-08-22 14:50:00,885 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,885 - INFO - SELECT * FROM [Secrets Manager secrets...(428)];
+2024-08-22 14:50:00,886 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,886 - INFO - SELECT * FROM [IAM Access Key Rotation...(247)];
+2024-08-22 14:50:00,888 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,888 - INFO - SELECT * FROM [Remove unused Secrets M...(425)];
+2024-08-22 14:50:00,889 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,889 - INFO - SELECT * FROM [Database logging should...(076)];
+2024-08-22 14:50:00,890 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,890 - INFO - SELECT * FROM [API Gateway REST and We...(341)];
+2024-08-22 14:50:00,892 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,892 - INFO - SELECT * FROM [API Gateway REST API st...(344)];
+2024-08-22 14:50:00,893 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,893 - INFO - SELECT * FROM [CloudTrail trails shoul...(385)];
+2024-08-22 14:50:00,894 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,894 - INFO - SELECT * FROM [Security Groups - Unres...(067)];
+2024-08-22 14:50:00,926 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,926 - INFO - SELECT * FROM [Security groups should ...(121)];
+2024-08-22 14:50:00,931 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,931 - INFO - SELECT * FROM [Security Groups - Speci...(249)];
+2024-08-22 14:50:00,958 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,958 - INFO - SELECT * FROM [Security Groups - Speci...(249)];
+2024-08-22 14:50:00,986 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,986 - INFO - SELECT * FROM [VPC flow logging should...(328)];
+2024-08-22 14:50:00,987 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,987 - INFO - SELECT * FROM [VPC flow logging should...(328)];
+2024-08-22 14:50:00,989 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,989 - INFO - SELECT * FROM [API Gateway should be a...(335)];
+2024-08-22 14:50:00,990 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,990 - INFO - SELECT * FROM [VPC...(388)];
+2024-08-22 14:50:00,993 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,993 - INFO - SELECT * FROM [VPC...(388)];
+2024-08-22 14:50:00,996 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,996 - INFO - SELECT * FROM [Secrets Manager secrets...(422)];
+2024-08-22 14:50:00,997 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,997 - INFO - SELECT * FROM [The VPC default securit...(433)];
+2024-08-22 14:50:00,998 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,998 - INFO - SELECT * FROM [AWS Config should be enabled...];
+2024-08-22 14:50:00,999 - INFO - ********Detail table SQL************
+2024-08-22 14:50:00,999 - INFO - SELECT * FROM [Security Groups - Unres...(067)];
+2024-08-22 14:50:01,031 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,031 - INFO - SELECT * FROM [Auto scaling groups ass...(119)];
+2024-08-22 14:50:01,032 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,032 - INFO - SELECT * FROM [Amazon RDS engine minor...(166)];
+2024-08-22 14:50:01,034 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,034 - INFO - SELECT * FROM [AWS Lambda Functions Us...(218)];
+2024-08-22 14:50:01,047 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,047 - INFO - SELECT * FROM [Security Groups - Speci...(249)];
+2024-08-22 14:50:01,073 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,074 - INFO - SELECT * FROM [Lambda functions should...(319)];
+2024-08-22 14:50:01,078 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,078 - INFO - SELECT * FROM [Amazon SageMaker notebo...(389)];
+2024-08-22 14:50:01,079 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,079 - INFO - SELECT * FROM [Security groups should ...(459)];
+2024-08-22 14:50:01,087 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,087 - INFO - SELECT * FROM [Amazon EC2 should be co...(463)];
+2024-08-22 14:50:01,088 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,088 - INFO - SELECT * FROM [RDS cluster snapshots a...(058)];
+2024-08-22 14:50:01,089 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,089 - INFO - SELECT * FROM [RDS clusters should hav...(068)];
+2024-08-22 14:50:01,090 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,090 - INFO - SELECT * FROM [Amazon SQS queues shoul...(367)];
+2024-08-22 14:50:01,091 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,091 - INFO - SELECT * FROM [CloudTrail should have ...(382)];
+2024-08-22 14:50:01,092 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,092 - INFO - SELECT * FROM [S3 buckets should requi...(103)];
+2024-08-22 14:50:01,096 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,096 - INFO - SELECT * FROM [CloudFront SSL Certific...(143)];
+2024-08-22 14:50:01,097 - INFO - ********Detail table SQL************
+2024-08-22 14:50:01,097 - INFO - SELECT * FROM [API Gateway REST API st...(342)];
+2024-08-22 14:50:14,825 - INFO - {'region': 'us-west-2', 'workload': 'myacc_workload                                                            2813d2d32556b40c9a496e8045542954', 'lens': 'GCR Key Workload                                                            arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c', 'override_notes': True}
+2024-08-22 14:51:15,482 - INFO - Processing sheet: Sheet
+2024-08-22 14:51:15,482 - INFO - Processing sheet: Security
+2024-08-22 14:51:15,483 - INFO - Processing sheet: Performance
+2024-08-22 14:51:15,484 - INFO - Processing sheet: Reliability
+2024-08-22 14:51:15,484 - INFO - Processing sheet: Cost optimization
+2024-08-22 14:51:15,505 - INFO - QNR update complete
+2024-08-22 14:51:15,509 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_4_q02
+2024-08-22 14:51:16,585 - INFO - Successfully updated answer for question: pillar_4_q02
+2024-08-22 14:51:16,585 - INFO - Updating...2%
+2024-08-22 14:51:16,585 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_4_q02
+2024-08-22 14:51:17,207 - INFO - Successfully updated answer for question: pillar_4_q02
+2024-08-22 14:51:17,207 - INFO - Updating...3%
+2024-08-22 14:51:17,207 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_4_q02
+2024-08-22 14:51:17,877 - INFO - Successfully updated answer for question: pillar_4_q02
+2024-08-22 14:51:17,877 - INFO - Updating...5%
+2024-08-22 14:51:17,877 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_4_q02
+2024-08-22 14:51:18,481 - INFO - Successfully updated answer for question: pillar_4_q02
+2024-08-22 14:51:18,482 - INFO - Updating...7%
+2024-08-22 14:51:18,482 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_2_q03
+2024-08-22 14:51:19,107 - INFO - Successfully updated answer for question: pillar_2_q03
+2024-08-22 14:51:19,108 - INFO - Updating...8%
+2024-08-22 14:51:19,108 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_2_q04
+2024-08-22 14:51:19,685 - INFO - Successfully updated answer for question: pillar_2_q04
+2024-08-22 14:51:19,685 - INFO - Updating...10%
+2024-08-22 14:51:19,685 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_3_q11
+2024-08-22 14:51:20,298 - INFO - Successfully updated answer for question: pillar_3_q11
+2024-08-22 14:51:20,298 - INFO - Updating...12%
+2024-08-22 14:51:20,299 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_3_q12
+2024-08-22 14:51:20,892 - INFO - Successfully updated answer for question: pillar_3_q12
+2024-08-22 14:51:20,892 - INFO - Updating...13%
+2024-08-22 14:51:20,892 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_3_q08
+2024-08-22 14:51:21,466 - INFO - Successfully updated answer for question: pillar_3_q08
+2024-08-22 14:51:21,466 - INFO - Updating...15%
+2024-08-22 14:51:21,467 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_3_q08
+2024-08-22 14:51:22,047 - INFO - Successfully updated answer for question: pillar_3_q08
+2024-08-22 14:51:22,047 - INFO - Updating...17%
+2024-08-22 14:51:22,048 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_3_q10
+2024-08-22 14:51:22,624 - INFO - Successfully updated answer for question: pillar_3_q10
+2024-08-22 14:51:22,624 - INFO - Updating...18%
+2024-08-22 14:51:22,624 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_3_q10
+2024-08-22 14:51:23,206 - INFO - Successfully updated answer for question: pillar_3_q10
+2024-08-22 14:51:23,206 - INFO - Updating...20%
+2024-08-22 14:51:23,206 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q01
+2024-08-22 14:51:23,788 - INFO - Successfully updated answer for question: pillar_1_q01
+2024-08-22 14:51:23,789 - INFO - Updating...22%
+2024-08-22 14:51:23,789 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q01
+2024-08-22 14:51:27,903 - INFO - Successfully updated answer for question: pillar_1_q01
+2024-08-22 14:51:27,903 - INFO - Updating...23%
+2024-08-22 14:51:27,904 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:28,578 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:28,579 - INFO - Updating...25%
+2024-08-22 14:51:28,579 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:29,285 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:29,285 - INFO - Updating...27%
+2024-08-22 14:51:29,286 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:29,925 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:29,925 - INFO - Updating...28%
+2024-08-22 14:51:29,925 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:30,563 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:30,563 - INFO - Updating...30%
+2024-08-22 14:51:30,563 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:31,189 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:31,190 - INFO - Updating...32%
+2024-08-22 14:51:31,190 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:31,781 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:31,781 - INFO - Updating...33%
+2024-08-22 14:51:31,781 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:32,375 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:32,375 - INFO - Updating...35%
+2024-08-22 14:51:32,376 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:32,987 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:32,987 - INFO - Updating...37%
+2024-08-22 14:51:32,987 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:33,601 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:33,601 - INFO - Updating...38%
+2024-08-22 14:51:33,602 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:34,212 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:34,213 - INFO - Updating...40%
+2024-08-22 14:51:34,213 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:34,799 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:34,799 - INFO - Updating...42%
+2024-08-22 14:51:34,799 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q02
+2024-08-22 14:51:35,399 - INFO - Successfully updated answer for question: pillar_1_q02
+2024-08-22 14:51:35,400 - INFO - Updating...43%
+2024-08-22 14:51:35,400 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q03
+2024-08-22 14:51:36,002 - INFO - Successfully updated answer for question: pillar_1_q03
+2024-08-22 14:51:36,002 - INFO - Updating...45%
+2024-08-22 14:51:36,002 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q03
+2024-08-22 14:51:36,601 - INFO - Successfully updated answer for question: pillar_1_q03
+2024-08-22 14:51:36,601 - INFO - Updating...47%
+2024-08-22 14:51:36,601 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q04
+2024-08-22 14:51:37,193 - INFO - Successfully updated answer for question: pillar_1_q04
+2024-08-22 14:51:37,194 - INFO - Updating...48%
+2024-08-22 14:51:37,194 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q04
+2024-08-22 14:51:37,778 - INFO - Successfully updated answer for question: pillar_1_q04
+2024-08-22 14:51:37,778 - INFO - Updating...50%
+2024-08-22 14:51:37,779 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q04
+2024-08-22 14:51:38,367 - INFO - Successfully updated answer for question: pillar_1_q04
+2024-08-22 14:51:38,368 - INFO - Updating...52%
+2024-08-22 14:51:38,368 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q04
+2024-08-22 14:51:39,013 - INFO - Successfully updated answer for question: pillar_1_q04
+2024-08-22 14:51:39,013 - INFO - Updating...53%
+2024-08-22 14:51:39,014 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:39,600 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:39,602 - INFO - Updating...55%
+2024-08-22 14:51:39,602 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:40,177 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:40,178 - INFO - Updating...57%
+2024-08-22 14:51:40,178 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:40,760 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:40,760 - INFO - Updating...58%
+2024-08-22 14:51:40,760 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:41,360 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:41,361 - INFO - Updating...60%
+2024-08-22 14:51:41,361 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:41,974 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:41,975 - INFO - Updating...62%
+2024-08-22 14:51:41,975 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:42,570 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:42,570 - INFO - Updating...63%
+2024-08-22 14:51:42,571 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:43,169 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:43,170 - INFO - Updating...65%
+2024-08-22 14:51:43,170 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:43,740 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:43,741 - INFO - Updating...67%
+2024-08-22 14:51:43,741 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:44,326 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:44,327 - INFO - Updating...68%
+2024-08-22 14:51:44,327 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:44,930 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:44,930 - INFO - Updating...70%
+2024-08-22 14:51:44,931 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q05
+2024-08-22 14:51:45,505 - INFO - Successfully updated answer for question: pillar_1_q05
+2024-08-22 14:51:45,505 - INFO - Updating...72%
+2024-08-22 14:51:45,505 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:46,088 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:46,088 - INFO - Updating...73%
+2024-08-22 14:51:46,089 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:46,675 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:46,675 - INFO - Updating...75%
+2024-08-22 14:51:46,675 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:47,257 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:47,258 - INFO - Updating...77%
+2024-08-22 14:51:47,258 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:47,835 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:47,835 - INFO - Updating...78%
+2024-08-22 14:51:47,835 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:48,430 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:48,431 - INFO - Updating...80%
+2024-08-22 14:51:48,431 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:49,013 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:49,013 - INFO - Updating...82%
+2024-08-22 14:51:49,014 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:49,697 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:49,697 - INFO - Updating...83%
+2024-08-22 14:51:49,697 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:50,301 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:50,301 - INFO - Updating...85%
+2024-08-22 14:51:50,302 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:50,900 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:50,901 - INFO - Updating...87%
+2024-08-22 14:51:50,901 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q06
+2024-08-22 14:51:51,545 - INFO - Successfully updated answer for question: pillar_1_q06
+2024-08-22 14:51:51,546 - INFO - Updating...88%
+2024-08-22 14:51:51,546 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q08
+2024-08-22 14:51:52,144 - INFO - Successfully updated answer for question: pillar_1_q08
+2024-08-22 14:51:52,144 - INFO - Updating...90%
+2024-08-22 14:51:52,145 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q08
+2024-08-22 14:51:52,734 - INFO - Successfully updated answer for question: pillar_1_q08
+2024-08-22 14:51:52,735 - INFO - Updating...92%
+2024-08-22 14:51:52,735 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q08
+2024-08-22 14:51:53,321 - INFO - Successfully updated answer for question: pillar_1_q08
+2024-08-22 14:51:53,322 - INFO - Updating...93%
+2024-08-22 14:51:53,322 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q08
+2024-08-22 14:51:53,923 - INFO - Successfully updated answer for question: pillar_1_q08
+2024-08-22 14:51:53,924 - INFO - Updating...95%
+2024-08-22 14:51:53,924 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q09
+2024-08-22 14:51:54,518 - INFO - Successfully updated answer for question: pillar_1_q09
+2024-08-22 14:51:54,518 - INFO - Updating...97%
+2024-08-22 14:51:54,518 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q09
+2024-08-22 14:51:55,105 - INFO - Successfully updated answer for question: pillar_1_q09
+2024-08-22 14:51:55,105 - INFO - Updating...98%
+2024-08-22 14:51:55,105 - INFO - Updating:2813d2d32556b40c9a496e8045542954,arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c,pillar_1_q09
+2024-08-22 14:51:55,731 - INFO - Successfully updated answer for question: pillar_1_q09
+2024-08-22 14:51:55,731 - INFO - Updating...100%
+2024-08-22 14:53:34,439 - INFO - {'region': 'us-west-2', 'workload': 'myacc_workload                                                            2813d2d32556b40c9a496e8045542954', 'lens': 'GCR Key Workload                                                            arn:aws:wellarchitected:us-west-2:544592066775:lens/652847f87a4e69d881281b3239b5172c', 'override_notes': True}
