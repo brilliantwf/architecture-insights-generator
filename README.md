@@ -63,3 +63,10 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
 
+## Comments
+
+1. pjson.py lens.json转output.csv 用于生成所有lens内容.
+2. questionnaire.py 用于生成调查问卷,会包含所有Pillar问卷
+3. 中文note按钮(需要在上传文档前选择),提交上去的comments会是中文的,如果中文翻译的不好可以自行修改output.csv内容
+4. Update QNR,用于更新调查问卷,其中绿色部分已经通过TA校验过,余下的需要自行和客户沟通.
+

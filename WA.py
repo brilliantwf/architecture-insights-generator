@@ -4,7 +4,7 @@ import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import pandas as pd
 import csv
-from openpyxl import Workbook
+from openpyxl import Workbook,load_workbook
 from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.utils import get_column_letter
 from PIL import Image, ImageTk
@@ -64,7 +64,7 @@ bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 # 创建Label小部件
 text_frame = tk.Frame(root, bg="white")
-text_frame.place(relx=0.5, rely=0.3, anchor="center", relwidth=0.7, relheight=0.45)
+text_frame.place(relx=0.5, rely=0.3, anchor="center", relwidth=0.7, relheight=0.32)
 msg_label = tk.Label(text_frame, text="Please import the xlsx file exported from AWS Trusted Advisor into Architecture Insights Generator using the button below.", bg="white", fg="black", wraplength=350, justify="center", height=5)
 msg_label.pack(pady=10)
 
@@ -72,20 +72,25 @@ msg_label.pack(pady=10)
 # 创建文件选择按钮
 chinese_notes_var = tk.BooleanVar()
 chinese_notes_checkbox = tk.Checkbutton(root, text="中文notes", variable=chinese_notes_var)
-chinese_notes_checkbox.place(relx=0.7, rely=0.62, anchor="center")
+chinese_notes_checkbox.place(relx=0.7, rely=0.52, anchor="center")
 
 file_button = tk.Button(root, text="Select Excel File", font=("Arial", 14), command=lambda: browse_file(), width=10)
-file_button.place(relx=0.5, rely=0.62, anchor="center")
+file_button.place(relx=0.5, rely=0.52, anchor="center")
 
 
 # 创建设置按钮
 settings_button = tk.Button(root, text="Settings", font=("Arial", 14), command=lambda: show_settings_window(), width=10)
-settings_button.place(relx=0.5, rely=0.74, anchor="center")
+settings_button.place(relx=0.5, rely=0.64, anchor="center")
 
 # 创建更新WA按钮
 update_button = tk.Button(root, text="Update Workload", font=("Arial", 14), command=lambda: update_workload_with_TA(), width=10)
-update_button.place(relx=0.5, rely=0.86, anchor="center")
+update_button.place(relx=0.5, rely=0.76, anchor="center")
 update_button.config(state="disabled")
+
+# 创建更新问卷按钮
+updateQ_button = tk.Button(root, text="Update QNR", font=("Arial", 14), command=lambda: update_Questionnaire(), width=14)
+updateQ_button.place(relx=0.5, rely=0.88, anchor="center")
+updateQ_button.config(state="disabled")
 
 # 创建设置对象
 settings = {
@@ -310,6 +315,7 @@ def import_excel(filename):
     update_msg_label("The analysis has been saved in the TA-check.xlsx file in the current directory. If you need to update it to the Notes in the AWS WA Tool, please first set the necessary parameters through the 'Settings'.")
 
     update_button.config(state="normal")
+    updateQ_button.config(state="normal")
 
 
 
@@ -460,7 +466,7 @@ def update_workload_with_TA():
                 LensAlias=lens_alias,
                 QuestionId=question[1]
                 )
-            #print ("response------------>",response)
+            #print ("Choice Title------------>",question[3],question[3])
             if 'Notes' in response['Answer']:
                 notes = response['Answer']['Notes']
                 
@@ -485,6 +491,42 @@ def update_workload_with_TA():
     messagebox.showinfo("Success", f"Updated {update_count} answer(s). ")
     update_msg_label(f"There were {TA_results_size} questions in total, and {update_count} were successfully updated.")
 
+# 更新问卷
+def update_Questionnaire():
+    # Load the workload Excel file
+    workbook = load_workbook('qnr.xlsx')
+
+    # Define a green fill pattern
+    green_fill = PatternFill(start_color="00FF00", end_color="00FF00", fill_type="solid")
+
+    # Iterate over each sheet in the workbook
+    for sheet_name in workbook.sheetnames:
+        worksheet = workbook[sheet_name]
+        logger.info(f"Processing sheet: {sheet_name}")
+
+        # Find the column index for "Choice Title"
+        Choice_col = None
+        for col in worksheet.iter_cols(1, worksheet.max_column):
+            if col[0].value == "Choice Title":
+                Choice_col = col[0].column
+                break
+
+        if Choice_col is None:
+            continue  # Skip if "Question ID" column is not found
+
+        # Iterate over each row in the sheet
+        for row in worksheet.iter_rows(min_row=2, max_row=worksheet.max_row):
+            Choice_id = row[Choice_col - 1].value  # Get the value in the "Question ID" column
+
+            # Check if the question ID matches any in TA_results
+            if any(question[5] == Choice_id for question in TA_results):
+                # Apply green fill to the entire row
+                for cell in row:
+                    cell.fill = green_fill
+
+    # Save the modified workbook
+    workbook.save('qnr_modified.xlsx')
+    
 
 # 定义更新Label文本的函数
 def update_msg_label(msg):
