@@ -1,4 +1,4 @@
-﻿Pillar Name,Question Title,Choice Title,Trusted Advisor Checks,,CN Notes,Question ID,Choice ID
+﻿Pillar Name,Question Title,Choice Title,Trusted Advisor Checks,,Trusted Advisor Checks_translated,Question ID,Choice ID
 Security,SEC 1 How do you securely operate your workload?,P0 Secure account root user and properties,MFA on Root Account 7DAFEmoDos,,根账户 7DAFEmoDos 上的 MFA,pillar_1_q01,pillar_1_q01choice2
 Security,SEC 1 How do you securely operate your workload?,P0 Secure account root user and properties,IAM Password Policy Yw2K9puPzl,,IAM 密码策略 Yw2K9puPzl,pillar_1_q01,pillar_1_q01choice2
 Security,SEC 2 How do you manage identities for people and machines?,"P0 Use strong sign-in mechanisms - Enforce MFA for root account , power user accounts",MFA on Root Account 7DAFEmoDos,,根账户 7DAFEmoDos 上的 MFA,pillar_1_q02,pillar_1_q02choice1

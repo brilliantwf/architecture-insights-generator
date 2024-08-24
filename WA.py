@@ -93,7 +93,7 @@ settings = {
     'region': None,
     'workload': None,
     'lens': None,
-    'override_notes' : True
+    'override_notes' : False
 }
 
 # 创建TA检查结果对象
@@ -321,7 +321,7 @@ def output_excel():
 
     # 执行SQL查询
     query = """
-    SELECT a.check_index, b.[Question ID], b.[Choice ID], b.[Pillar Name], b.[Question Title], b.[Choice Title], b.[Trusted Advisor Checks], b.[CN Notes],a.description
+    SELECT a.check_index, b.[Question ID], b.[Choice ID], b.[Pillar Name], b.[Question Title], b.[Choice Title], b.[Trusted Advisor Checks], b.[Trusted Advisor Checks_translated],a.description
     FROM TA_all a, lens b
     WHERE b.[Trusted Advisor Checks] LIKE a.check_item||'%'
       AND a.status IN ('Status: warning', 'Status: error')
